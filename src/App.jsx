@@ -7,6 +7,7 @@ import Songs from "./Components/Songs";
 import Error404 from "./Pages/Error404";
 import Home from "./Pages/Home";
 import SongDetails from "./Components/SongDetails";
+import SongEditForm from "./Components/SongEditForm";
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
         <Route path="/songs/:id" element=
           {<SongDetails/>}/>
         <Route path="/songs/:id/edit" element=
-          {<h1>Edit Form</h1>}/>
+          {<SongEditForm/>}/>
       </Routes>
     </main>
     <Footer />
