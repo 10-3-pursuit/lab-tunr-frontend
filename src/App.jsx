@@ -14,7 +14,7 @@ const App = () => {
           {<h1>New - Create Form</h1>}/>
         <Route path="/songs/:id" element=
           {<h1>Show One</h1>}/>
-        <Route path="/bookmarks/:id/edit" element=
+        <Route path="/songs/:id/edit" element=
           {<h1>Edit Form</h1>}/>
       </Routes>
     </main>
