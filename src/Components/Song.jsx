@@ -1,4 +1,5 @@
 // song table and link to single song
+// used as prop in songs.jsx to populate table
 import React from 'react'
 import { Link } from 'react-router-dom';
 

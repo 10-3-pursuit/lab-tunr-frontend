@@ -102,6 +102,8 @@ const SongEditForm = () => {
             {/* <button>Submit</button> */}
             <input type="submit" />
         </form>
+
+        {/* doesn't work properly for now - if song has id of 5 for example sends user to  http://localhost:3000/songs/5/edit/songs/5 instead of http://localhost:3000/songs/5/*/}
         <Link to={`songs/${id}`}>
             <button>Cancel</button>
         </Link>
