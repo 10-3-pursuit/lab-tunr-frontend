@@ -26,6 +26,7 @@ const Songs = () => {
                         <th>Artist</th>
                         <th>Album</th>
                         <th>Time</th>
+                        <th>View Song</th>
                     </tr>
                 </thead>
                 <tbody>

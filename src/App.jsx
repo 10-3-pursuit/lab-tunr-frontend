@@ -6,6 +6,7 @@ import "./App.css";
 import Songs from "./Components/Songs";
 import Error404 from "./Pages/Error404";
 import Home from "./Pages/Home";
+import SongDetails from "./Components/SongDetails";
 
 const App = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
         <Route path="/songs/new" element=
           {<h1>New - Create Form</h1>}/>
         <Route path="/songs/:id" element=
-          {<h1>Show One</h1>}/>
+          {<SongDetails/>}/>
         <Route path="/songs/:id/edit" element=
           {<h1>Edit Form</h1>}/>
       </Routes>

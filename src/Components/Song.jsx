@@ -1,5 +1,6 @@
-// song table
+// song table and link to single song
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Song = ({ song }) => {
   return (
@@ -22,6 +23,9 @@ const Song = ({ song }) => {
       </td>
       <td>
         {song.time}
+      </td>
+      <td>
+        <Link to={`/songs/${song.id}`}>🎵</Link>
       </td>
     </tr>
   )
