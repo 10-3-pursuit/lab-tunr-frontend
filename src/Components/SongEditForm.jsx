@@ -1,6 +1,6 @@
 // edit form
-import { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const API = import.meta.env.VITE_BASE_URL;
 
@@ -15,15 +15,43 @@ const SongEditForm = () => {
         time:"",
         is_favorite: false,
     });
-    const handleTextChange = () => {}
-    const handleCheckBoxChange = () => {}
-    const handleSubmit = () => {}
+    const handleTextChange = (e) => {
+        setSong({ ...song, [e.target.id]: e.target.value });
+    };
+    const handleCheckBoxChange = () => {
+        setSong({ ...song, is_favorite: !song.is_favorite });
+    };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        updateSong();
+    } // uses updateSong as callback fx
 
     const updateSong = () => {
         // fetch call for PUT method
-    }
+        console.log(`${API}/songs/${id}`);
+        fetch(`${API}/songs/${id}`, {
+            method: "PUT",
+            body: JSON.stringify(song),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        .then(() => navigate(`/songs/${id}`))
+        .catch((error) => console.error("catch", error));
+    };
 
     // useEffect to fill form with song data (on page load so [ ] for dependency)
+    useEffect(() => {
+        fetch(`${API}/songs/${id}`)
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                console.log(data);
+                setSong(data);
+            })
+            .catch((error) => console.error(error));
+    }, [id]);
 
   return (
     <div>
@@ -67,11 +95,16 @@ const SongEditForm = () => {
             <label htmlFor="is-favorite">Is Favorite?</label>
             <input
                 id="is_favorite"
-                type="chackbox"
+                type="checkbox"
                 onChange={handleCheckBoxChange}
                 checked={song.is_favorite}
             />
+            {/* <button>Submit</button> */}
+            <input type="submit" />
         </form>
+        <Link to={`songs/${id}`}>
+            <button>Cancel</button>
+        </Link>
     </div>
   )
 }
