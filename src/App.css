@@ -1,5 +1,6 @@
 html, body {
     font-size: 16px;
+    text-align: center;
 }
 
 header {
@@ -14,6 +15,15 @@ main {
     text-align: center;
     align-content: center;
     justify-content: center;
+}
+
+table {
+    width: 50%;
+    margin: auto;
+}
+
+td, thead {
+    text-align: center;
 }
 
 footer {
