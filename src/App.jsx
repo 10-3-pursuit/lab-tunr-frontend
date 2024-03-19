@@ -4,18 +4,19 @@ import NavBar from "./Components/Static/NavBar";
 import Footer from "./Components/Static/Footer";
 import "./App.css";
 import Songs from "./Components/Songs";
+import Error404 from "./Pages/Error404";
+import Home from "./Pages/Home";
 
 const App = () => {
   return (
     <>
     <Header/>
-    <NavBar/>
     <main>
       <Routes>
         <Route path="*" element=
-          {<h1>404: Page Not Found</h1>}/>
+          {<Error404/>}/>
         <Route path="/" element=
-          {<h1>Home Page</h1>}/>
+          {<Home/>}/>
         <Route path="/songs" element=
           {<Songs/>}/>
         <Route path="/songs/new" element=

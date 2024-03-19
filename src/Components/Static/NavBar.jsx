@@ -1,8 +1,15 @@
-import React from 'react'
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav>NavBar</nav>
+    <nav>
+        <button>
+            <Link to="/songs">All Songs</Link>
+        </button>
+        <button>
+            <Link to="/songs/new">Add New Song</Link>
+        </button>
+    </nav>
   )
 }
 
