@@ -23,11 +23,10 @@ const SongNewForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         addSong();
-    } // uses updateSong as callback fx
+    };
 
     const addSong = () => {
         // fetch call for POST method
-        console.log(`${API}/songs/`);
         fetch(`${API}/songs/`, {
             method: "POST",
             body: JSON.stringify(song),

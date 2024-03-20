@@ -17,6 +17,13 @@ const SongDetails = () => {
   }, [id]);
 
   // deleteSong fx
+  const deleteSong = () => {
+    fetch(`${API}/songs/${id}`, {
+      method: "DELETE",
+    })
+    .then(() => navigate(`/songs`))
+    .catch((error) => console.error(error));
+  };
 
   return (
     <article>
@@ -34,13 +41,23 @@ const SongDetails = () => {
       </div>
       <div>
         <Link to={`/songs/${id}/edit`}>
-          <button>Edit</button>
+          <button>Edit Song</button>
         </Link>
       </div>
-      {/* button on click for delete fx */}
+      <div>
+        <button onClick={deleteSong}>Delete Song</button>
+      </div>
       {/* playlist prop */}
     </article>
   )
 }
 
 export default SongDetails;
+
+// {
+//   "name": "The Show Must Go On",
+//   "artist": "Queen",
+//   "album": "Innuendo",
+//   "time": "4:23",
+//   "is_favorite": true
+// }

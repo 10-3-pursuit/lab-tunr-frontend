@@ -1,6 +1,7 @@
 html, body {
     font-size: 16px;
     text-align: center;
+    height: 100vh;
 }
 
 header {
@@ -39,6 +40,7 @@ main {
     text-align: center;
     align-content: center;
     justify-content: center;
+    padding-bottom: 4rem;
 }
 
 table {
@@ -52,7 +54,7 @@ td, thead {
 
 footer {
     display: flex;
-    position: absolute;
+    position: fixed;
     margin: 0;
     justify-content: center;
     width: 100%;

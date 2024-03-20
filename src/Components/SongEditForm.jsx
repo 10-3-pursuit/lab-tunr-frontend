@@ -28,7 +28,6 @@ const SongEditForm = () => {
 
     const updateSong = () => {
         // fetch call for PUT method
-        console.log(`${API}/songs/${id}`);
         fetch(`${API}/songs/${id}`, {
             method: "PUT",
             body: JSON.stringify(song),
@@ -47,7 +46,6 @@ const SongEditForm = () => {
                 return res.json();
             })
             .then((data) => {
-                console.log(data);
                 setSong(data);
             })
             .catch((error) => console.error(error));
