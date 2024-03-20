@@ -52,7 +52,7 @@ const SongEditForm = () => {
     }, [id]);
 
   return (
-    <div>
+    <div className='form'>
         <form onSubmit={handleSubmit}>
             <label htmlFor="name">Song:</label>
             <input
@@ -99,12 +99,13 @@ const SongEditForm = () => {
             />
             {/* <button>Submit</button> */}
             <input type="submit" />
-        </form>
-
-        {/* fixed error by adding a / in front of songs */}
+                    {/* fixed error by adding a / in front of songs */}
         <Link to={`/songs/${id}`}>
             <button>Cancel</button>
         </Link>
+        </form>
+
+
     </div>
   )
 }

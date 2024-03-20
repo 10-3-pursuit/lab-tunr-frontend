@@ -1,6 +1,7 @@
 // Show one
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom"; // link for back button to songs index view and link for edit form view
+import Playlists from "./Playlists/Playlists";
 
 const API = import.meta.env.VITE_BASE_URL;
 
@@ -45,9 +46,10 @@ const SongDetails = () => {
         </Link>
       </div>
       <div>
-        <button onClick={deleteSong}>Delete Song</button>
+        <button onClick={deleteSong} className="delete">Delete Song</button>
       </div>
       {/* playlist prop */}
+      <Playlists />
     </article>
   )
 }

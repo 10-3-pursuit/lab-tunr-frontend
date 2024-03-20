@@ -41,7 +41,7 @@ const SongNewForm = () => {
     };
 
   return (
-    <div>
+    <div className='form'>
         <form onSubmit={handleSubmit}>
             <label htmlFor="name">Song:</label>
             <input
@@ -87,10 +87,11 @@ const SongNewForm = () => {
                 checked={song.is_favorite}
             />
             <input type="submit" />
-        </form>
-        <Link to={`/songs`}>
+            <Link to={`/songs`}>
             <button>Cancel</button>
-        </Link>
+            </Link>
+        </form>
+        
     </div>
   )
 }

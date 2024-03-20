@@ -15,23 +15,25 @@ header {
     text-decoration: none;
     color: white;
 }
-.nav-buttons {
+.nav-buttons, button, input[type="submit"] {
     display: flex;
     gap: 0.5rem;
-    margin-top: 0.5rem;
+    /* margin-top: 0.5rem; */
+    padding: 0.5%;
+    justify-content: center;
+    align-content: center;
 }
 a, a:visited {
     text-decoration: none;
 }
-button {
-    border: none;
-    outline: none;
-    border-radius: 0.125rem;
-}
+
 button a {
     color: black;
-    text-decoration: none;
-    padding: 1%; 
+    text-decoration: none; 
+}
+
+button.delete {
+    background-color: coral;
 }
 
 main {
