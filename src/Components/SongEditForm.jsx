@@ -98,7 +98,7 @@ const SongEditForm = () => {
                 checked={song.is_favorite}
             />
             {/* <button>Submit</button> */}
-            <input type="submit" />
+            <button type="submit">Submit</button>
                     {/* fixed error by adding a / in front of songs */}
         <Link to={`/songs/${id}`}>
             <button>Cancel</button>

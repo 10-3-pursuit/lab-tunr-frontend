@@ -63,11 +63,12 @@ const Playlists = ()=> {
   };
 
   return (
-    <div className="Playlists">
+    <section>
       <h2>Playlists</h2>
       <PlaylistForm handleAdd={handleAdd}>
-        <h3>Add a New Playlist</h3>
+        <h3>Add Song to New Playlist</h3>
       </PlaylistForm>
+      <h2>Song included in:</h2>
       {playlists.map((playlist) => (
         <Playlist
           key={playlist.id}
@@ -76,7 +77,7 @@ const Playlists = ()=> {
           handleDelete={handleDelete}
         />
       ))}
-    </div>
+    </section>
   );
 }
 

@@ -28,27 +28,25 @@ const SongDetails = () => {
 
   return (
     <article>
+      <section>
+      <h2>Song</h2>
       <h3>
-        {song.is_favorite ? <span>⭐️</span> : null} {song.name} by {song.artist}
+        {song.is_favorite ? <span>⭐️</span> : null} <p>{song.name}</p> by <p>{song.artist}</p>
       </h3>
       <ul>
-        <li><strong>Album: </strong>{song.album}</li>
-        <li><strong>Time: </strong>{song.time}</li>
+        <li><strong>Album: </strong><p>{song.album}</p></li>
+        <li><strong>Time: </strong><p>{song.time}</p></li>
       </ul>
-      <div>
         <Link to={`/songs`}>
           <button>Back</button>
         </Link>
-      </div>
-      <div>
         <Link to={`/songs/${id}/edit`}>
           <button>Edit Song</button>
         </Link>
-      </div>
-      <div>
-        <button onClick={deleteSong} className="delete">Delete Song</button>
-      </div>
-      {/* playlist prop */}
+        <button onClick={deleteSong} className="delete">
+          Delete Song
+        </button>
+      </section>
       <Playlists/>
     </article>
   )

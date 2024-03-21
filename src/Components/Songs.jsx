@@ -17,7 +17,8 @@ const Songs = () => {
     }, []);
   return (
     <div>
-        <section>
+        <section className="table">
+            <h2>All Songs</h2>
             <table>
                 <thead>
                     <tr>

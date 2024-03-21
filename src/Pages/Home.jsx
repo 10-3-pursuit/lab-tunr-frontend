@@ -1,9 +1,12 @@
 // Home page
-import React from 'react'
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>Home</div>
+      <div className='home'>
+        <h1>Welcome to the Best Tunr App</h1>
+        <Link to="/songs"><p>Click to Begin!</p></Link>
+      </div>
   )
 }
 

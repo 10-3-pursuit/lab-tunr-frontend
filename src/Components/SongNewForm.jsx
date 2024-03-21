@@ -1,6 +1,6 @@
 // create new form
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const API = import.meta.env.VITE_BASE_URL;
 
@@ -40,8 +40,18 @@ const SongNewForm = () => {
         .catch((error) => console.error("catch", error));
     };
 
+    const location = useLocation();
+
+    let formTitle;
+    if (location.pathname.includes('/songs/new')) {
+        formTitle = 'Add New Song';
+    } else if (location.pathname.includes('/songs/')) {
+        formTitle = 'Edit Song';
+    }
+
   return (
     <div className='form'>
+        {<h2>{formTitle}</h2>}
         <form onSubmit={handleSubmit}>
             <label htmlFor="name">Song:</label>
             <input
@@ -86,7 +96,7 @@ const SongNewForm = () => {
                 onChange={handleCheckBoxChange}
                 checked={song.is_favorite}
             />
-            <input type="submit" />
+            <button type="submit">Submit</button>
             <Link to={`/songs`}>
             <button>Cancel</button>
             </Link>

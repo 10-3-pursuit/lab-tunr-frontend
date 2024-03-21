@@ -39,7 +39,7 @@ function PlaylistForm({ playlistDetails, handleEdit, handleAdd, toggleView, chil
   };
 
   return (
-    <div className="PlaylistForm">
+    <div className="playlistForm">
       {children}
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
@@ -70,7 +70,7 @@ function PlaylistForm({ playlistDetails, handleEdit, handleAdd, toggleView, chil
         />
 
         <br />
-        <input type="submit" />
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

@@ -9,7 +9,7 @@ function Playlist({ playlist, handleDelete, handleEdit }) {
   };
 
   return (
-    <div className="Playlist">
+    <div className="playlist">
       {viewEditForm ? (
         <PlaylistForm
           playlistDetails={playlist}
@@ -17,15 +17,15 @@ function Playlist({ playlist, handleDelete, handleEdit }) {
           toggleView={toggleView}
         />
       ) : (
-        <div>
-          <h4>{playlist.name}</h4>
-          <p>Category: {playlist.category}</p>
-          <p>Description: {playlist.description}</p>
+        <div className="playlist">
+          <h3>{playlist.name}</h3>
+          Category: <p>{playlist.category}</p>
+          Description: <p>{playlist.description}</p>
         </div>
       )}
       <div className="playlist-actions">
         <button onClick={toggleView}>{viewEditForm ? 'Cancel' : 'Edit Playlist'}</button>
-        <button onClick={() => handleDelete(playlist.id)}>Delete</button>
+        <button onClick={() => handleDelete(playlist.id)} className='delete'>Delete</button>
       </div>
     </div>
   );
