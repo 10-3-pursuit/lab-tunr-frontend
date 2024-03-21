@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "./Components/Static/Header";
-import NavBar from "./Components/Static/NavBar";
 import Footer from "./Components/Static/Footer";
 import "./App.css";
 import Songs from "./Components/Songs";

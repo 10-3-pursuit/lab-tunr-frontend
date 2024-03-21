@@ -49,7 +49,7 @@ const SongDetails = () => {
         <button onClick={deleteSong} className="delete">Delete Song</button>
       </div>
       {/* playlist prop */}
-      <Playlists />
+      <Playlists/>
     </article>
   )
 }

@@ -15,7 +15,7 @@ header {
     text-decoration: none;
     color: white;
 }
-.nav-buttons, button, input[type="submit"] {
+.nav-buttons {
     display: flex;
     gap: 0.5rem;
     /* margin-top: 0.5rem; */
