@@ -1,0 +1,167 @@
+html, body {
+    font-size: 100%;
+    text-align: center;
+    height: 100vh;
+    font-family: Courier;
+    background: url(https://images.unsplash.com/photo-1526394931762-90052e97b376?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    background-color: black;
+    background-position: center;
+}
+
+div.home, div.error {
+    margin-top: 20rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5%;
+    border-radius: 2rem;
+}
+
+div.error {
+    color: red;
+}
+
+div.error p, div.home p{
+    color:yellow;
+    font-size: 2rem;
+}
+
+h1{
+    font-size: 4rem;
+}
+h2{
+    margin-bottom:1rem;
+    color:yellow;
+}
+p {
+    color:rgb(201, 243, 12);
+    margin-bottom: 1%;
+}
+
+a:hover {
+    width: fit-content;
+}
+
+.header-link, h1.home {
+    text-decoration: none;
+    color: white;
+}
+.nav-buttons {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5%;
+    justify-content: center;
+    align-content: center;
+    border: none;
+    margin-top: 1rem;
+}
+a, a:visited {
+    text-decoration: none;
+}
+
+button a, button, button.delete {
+    color: black;
+    text-decoration: none;
+    border: none; 
+    padding: 1.5%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+    margin-right: 0.5rem;
+    font-size: 0.75rem;
+    font-family: monospace;
+}
+
+button:hover, a:hover, button.delete:hover {
+    color: yellow;
+    background-color: black;
+}
+
+button.delete {
+    background-color: coral;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.playlistForm {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin:auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.form {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    width: 30%;
+}
+
+.form input[type="text"],
+.form input[type="checkbox"],
+.playlistForm input[type="text"],
+.playlistForm input[type="checkbox"], 
+.playlistForm textarea {
+    width: 100%;
+    padding: .25rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: Courier;
+}
+
+div.playlist {
+    margin-bottom: 1%;
+}
+
+section {
+    margin-top: 2%;
+    margin-bottom: 5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2%;
+    border-radius: 1rem;
+    width: 50vw;
+    height: auto;
+}
+
+section.table, table, tbody, thead {
+    width: fit-content;
+    margin: auto;
+    margin-top: 5%;
+    font-size: 1.5rem;
+}
+
+tr, th {
+    text-align: center;
+    width: fit-content;
+}
+
+ul, li {
+    list-style: none;
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    margin: 0;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    background-color: black;
+    color: white;
+}
